@@ -62,54 +62,73 @@ export function addUsersPlant(formEl){
 }
 
 export function createWateringSchedule(dateNum, waterAmount) {
-    let wateringSchedule = []
+    let wateringSchedule = [];
     // water schedule for light watering
     if (waterAmount === 1) {
+        const water1 = dateNum + 3;
+        wateringSchedule.push(water1);
+    } else if (waterAmount === 2) {
+        const water1 = dateNum + 2;
+        const water2 = dateNum + 6;
+        wateringSchedule.push(water1, water2);
+    } else if (waterAmount === 3) {
         const water1 = dateNum + 2;
         const water2 = dateNum + 4;
         const water3 = dateNum + 6;
-        wateringSchedule.push(water1, water2, water3)
+        wateringSchedule.push(water1, water2, water3);
     }
-
-    // water schedule for moderate watering
-
-    // water schedule for frequent watering
-
-
+    return wateringSchedule;
 }
 
-function determineWaterAmount(size, category) {
+export function determineWaterAmount(size, category) {
     let waterAmount = 0;
     // 3 potential water levels
-    if (size === 'small' && category === 'cactus') {
-        waterAmount = 1
-        return waterAmount;
+    if (size === 'small' && category === 'succulents-cactus') {
+        waterAmount = 3;
+    } else if (size === 'medium' && category === 'succulents-cactus') {
+        waterAmount = 2;
+    } else if (size === 'large' && category === 'succulents-cactus') {
+        waterAmount = 1;
+    } else if (size === 'small' && category === 'tropicals') {
+        waterAmount = 3;
+    } else if (size === 'medium' && category === 'tropicals') {
+        waterAmount = 2;
+    } else if (size === 'large' && category === 'tropicals') {
+        waterAmount = 1;
+    } else if (size === 'small' && category === 'air-plants') {
+        waterAmount = 3;
+    } else if (size === 'medium' && category === 'air-plants') {
+        waterAmount = 2;
+    } else if (size === 'large' && category === 'air-plants') {
+        waterAmount = 1;
+    } else {
+        return alert('Invalid water amount!');
     }
-
+    return waterAmount;
 }
 
-function dateNumber(dateAdded) {
-    let dateNum = 0
+export function dateNumber(dateAdded) {
+    let dateNum = 0;
     if (dateAdded === 'Monday') {
-        dateNum = 1
+        dateNum = 1;
     }
     if (dateAdded === 'Tuesday') {
-        dateNum = 2
+        dateNum = 2;
     }
     if (dateAdded === 'Wednesday') {
-        dateNum = 3
+        dateNum = 3;
     }
     if (dateAdded === 'Thursday') {
-        dateNum = 4
+        dateNum = 4;
     }
     if (dateAdded === 'Friday') {
-        dateNum = 5
+        dateNum = 5;
     }
     if (dateAdded === 'Saturday') {
-        dateNum = 6
+        dateNum = 6;
     }
     if (dateAdded === 'Sunday') {
-        dateNum = 7
+        dateNum = 7;
     }
 
     return dateNum;
