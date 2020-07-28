@@ -33,7 +33,7 @@ export function renderPlants(plants) {
     button.textContent = 'Add to Greenhouse';
     button.value = plants.name;
     button.addEventListener('click', () => {
-        // console.log('ID: ' + clothingItem.id);
+        
         const user = getUser();
 
         const sizeOfPlant = document.querySelector('#sizeSelector' + plants.name);

@@ -19,7 +19,7 @@ export function findById(arrayName, idName) {
     for (let i = 0; i < arrayName.length; i++) {
         const item = arrayName[i];
 
-        if (item.id === idName) {
+        if (item.name === idName) {
             return item;
         }
     }

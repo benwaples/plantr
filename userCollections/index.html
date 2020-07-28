@@ -6,6 +6,55 @@
     <title>Plantr - Collecitons</title>
 </head>
 <body>
+    <header>
+        <div>Logo</div>
+        <h1>Plantr</h1>
+        <div id="nav-bar">
+            <a href="">About Us</a>
+            <a href="../userCollections/index.html">Collection</a>
+            <a href="../waterToday/index.html">Plant Care</a>
+            <a href="../calendar/index.html">Calendar</a>
+        </div>
+    </header>
+    <main>
+        <div>
+        <ul id="collection-list">
+    
+        </ul>
+        </div>
+        
+        <div>
+            <form>
+                <label>
+                    <input type="text" placeholder="Plant Name" name="name">
+                </label>
+                <label>
+                    Plant Size:
+                    <select name="plant-size">
+                        <option value="small">Small</option>
+                        <option value="medium">Medium</option>
+                        <option value="large">Large</option>
+                    </select>
+                </label>
+                <label>
+                    Sunlight:
+                    <select name="sunlight">
+                        <option value="low-direct">Low Light(direct)</option>
+                        <option value="low-indirect">Low Light(indirect)</option>
+                        <option value="medium-direct">Medium Light(direct)</option>
+                        <option value="medium-indirect">Medium Light(indirect)</option>
+                        <option value="direct-light">Direct Sunlight</option>
+                        <option value="indirect-light">Indirect Sunlight</option>
+                    </select>
+                </label>
+                <label>
+                    <input type="file" name="img-upload">
+                </label>
+                <button>Add to Greenhouse</button>
+            </form>
+        </div>
+    </main>
+
     <script type="module" src="userCollection.js"></script>
 </body>
 </html>
