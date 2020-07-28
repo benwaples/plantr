@@ -39,6 +39,7 @@ export function renderPlants(plants) {
         const sizeOfPlant = document.querySelector('#sizeSelector' + plants.name);
 
         const newPlant = {
+            id: Math.floor(Math.random() * 10000),
             name: plants.name,
             size: sizeOfPlant.value
         };

@@ -15,6 +15,7 @@
   },
   "globals": {
     "QUnit": false
+    // "moment": false
   },
   "rules": {
     "eqeqeq": ["error", "always"],
