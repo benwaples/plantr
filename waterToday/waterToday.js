@@ -1,1 +1,23 @@
-console.log('water today Page');
+import { renderWaterToday } from '../waterToday/waterTodayUtils.js';
+import { getUser } from '../userUtils.js';
+import { dateNumber } from '../userCollections/userCollectionsUtils.js';
+
+const waterTodayList = document.getElementById('water-today-list');
+
+const user = getUser();
+const today = dateNumber(moment().format('dddd'));
+
+const userCollection = user.plantCollection;
+
+for (let i = 0; i < userCollection.length; i++) {
+    const plant = userCollection[i];
+
+    for (let j = 0; j < plant.wateringSchedule.length; j++) {
+        const subPlant = plant.wateringSchedule[j];
+
+        if (subPlant === today) {
+            let newPlant = renderWaterToday(plant);
+            waterTodayList.append(newPlant);
+        }
+    }
+}

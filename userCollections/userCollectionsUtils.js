@@ -65,16 +65,16 @@ export function createWateringSchedule(dateNum, waterAmount) {
     let wateringSchedule = [];
     // water schedule for light watering
     if (waterAmount === 1) {
-        const water1 = dateNum + 3;
+        const water1 = 3;
         wateringSchedule.push(water1);
     } else if (waterAmount === 2) {
-        const water1 = dateNum + 2;
-        const water2 = dateNum + 6;
+        const water1 = 2;
+        const water2 = 6;
         wateringSchedule.push(water1, water2);
     } else if (waterAmount === 3) {
-        const water1 = dateNum + 2;
-        const water2 = dateNum + 4;
-        const water3 = dateNum + 6;
+        const water1 = 2;
+        const water2 = 4;
+        const water3 = 6;
         wateringSchedule.push(water1, water2, water3);
     }
     return wateringSchedule;

@@ -44,8 +44,7 @@ export function renderPlants(plants) {
         const makeWateringSchedule = createWateringSchedule(today, waterAmount);
         
         const newPlant = {
-            id: Math.floor(Math.random() * 10000),
-            dateAdded: today,
+            id: plants.id,
             wateringSchedule: makeWateringSchedule,
             category: plants.category,
             name: plants.name,
