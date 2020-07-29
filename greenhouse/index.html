@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/plantSelection.css">
+    <script type="text/JavaScript" src="https://MomentJS.com/downloads/moment.js"></script>
     <title>Plantr - Collecitons</title>
 </head>
 <body>
@@ -11,9 +13,11 @@
         <h1>Plantr</h1>
         <div id="nav-bar">
             <a href="">About Us</a>
-            <a href="../userCollections/index.html">Collection</a>
+            <a href="../greenhouse/index.html">Greenhouse</a>
             <a href="../waterToday/index.html">Plant Care</a>
             <a href="../calendar/index.html">Calendar</a>
+            <a href="../plantSelection/index.html">Plant Selection</a>
+            <a href="../index.html">Home</a>
         </div>
     </header>
     <main>
@@ -48,13 +52,17 @@
                     </select>
                 </label>
                 <label>
-                    <input type="file" name="img-upload">
+                    Water Frequency:
+                    <select name="water">
+                        <option value="1">Light</option>
+                        <option value="2">Moderate</option>
+                        <option value="3">Heavy</option>
+                    </select>
                 </label>
                 <button>Add to Greenhouse</button>
             </form>
         </div>
     </main>
-
-    <script type="module" src="userCollection.js"></script>
+    <script type="module" src="userGreenhouse.js"></script>
 </body>
 </html>

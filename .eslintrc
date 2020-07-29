@@ -14,7 +14,8 @@
     "node": true
   },
   "globals": {
-    "QUnit": false
+    "QUnit": false,
+    "moment": false
   },
   "rules": {
     "eqeqeq": ["error", "always"],

@@ -1,4 +1,5 @@
 import { getUser, setUser } from '../userUtils.js';
+import { createWateringSchedule, dateNumber, determineWaterAmount } from '../greenhouse/userGreenhouseUtils.js';
 
 export function renderPlants(plants) {
     const li = document.createElement('li');
@@ -14,7 +15,7 @@ export function renderPlants(plants) {
     img.alt = plants.name + ' image';
     li.appendChild(img);
 
-    const sizes = ['Small', 'Medium', 'Large'];
+    const sizes = ['small', 'medium', 'large'];
 
     const sizeSelector = document.createElement('select');
     sizeSelector.id = 'sizeSelector' + plants.name;
@@ -38,9 +39,17 @@ export function renderPlants(plants) {
 
         const sizeOfPlant = document.querySelector('#sizeSelector' + plants.name);
 
+        const today = dateNumber(moment().format('dddd'));
+        const waterAmount = determineWaterAmount(sizeOfPlant.value, plants.category);
+        const makeWateringSchedule = createWateringSchedule(today, waterAmount);
+        
         const newPlant = {
+            id: plants.id,
+            wateringSchedule: makeWateringSchedule,
+            category: plants.category,
             name: plants.name,
-            size: sizeOfPlant.value
+            size: sizeOfPlant.value,
+            img: plants.img
         };
 
         user.plantCollection.push(newPlant);
