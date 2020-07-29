@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/ico" href="../assets/fern-2-57-282774.png">
-    <link rel="stylesheet" href="../styles/plantSelection.css">
     <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/greenHouse.css">
     <script type="text/JavaScript" src="https://MomentJS.com/downloads/moment.js"></script>
-    <title>Plantr - Collecitons</title>
+    <title>Plantr - Greenhouse</title>
 </head>
 <body>
     <header>
@@ -20,14 +20,9 @@
         <div id="link"><a href="../aboutUs/index.html">About Us</a></div>
     </header>
     <main>
-        <div>
-        <ul id="collection-list">
-    
-        </ul>
-        </div>
-        
-        <div>
+        <div id="form-div">
             <form>
+                <h3>Add Your Plant</h3>
                 <label>
                     <input type="text" placeholder="Plant Name" name="name">
                 </label>
@@ -42,10 +37,10 @@
                 <label>
                     Sunlight:
                     <select name="sunlight">
-                        <option value="low-direct">Low Light(direct)</option>
-                        <option value="low-indirect">Low Light(indirect)</option>
-                        <option value="medium-direct">Medium Light(direct)</option>
-                        <option value="medium-indirect">Medium Light(indirect)</option>
+                        <option value="low-direct">Low Light (direct)</option>
+                        <option value="low-indirect">Low Light (indirect)</option>
+                        <option value="medium-direct">Medium Light (direct)</option>
+                        <option value="medium-indirect">Medium Light (indirect)</option>
                         <option value="direct-light">Direct Sunlight</option>
                         <option value="indirect-light">Indirect Sunlight</option>
                     </select>
@@ -60,6 +55,11 @@
                 </label>
                 <button>Add to Greenhouse</button>
             </form>
+        </div>
+        <div>
+            <ul id="collection-list">
+        
+            </ul>
         </div>
     </main>
     <script type="module" src="userGreenhouse.js"></script>
