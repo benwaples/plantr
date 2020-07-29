@@ -1,4 +1,4 @@
-import { userCollectionRender, addUsersPlant } from './userCollectionsUtils.js';
+import { userCollectionRender, addUsersPlant } from './userGreenhouseUtils.js';
 
 import { getUser } from '../userUtils.js';
 

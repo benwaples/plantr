@@ -15,6 +15,12 @@ const sunflower2 = {
     img: '../assets/sunflower.jpg'
 };
 
+export const stockPlant = {
+    name: 'usersPlant',
+    img: '../assets/stock-plant-img.jpg'
+};
+
+
 const plants = [
     sunflower,
     sunflower2

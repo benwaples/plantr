@@ -1,12 +1,11 @@
-import plants from '../data.js';
-import { findById, findByName, setUser, getUser } from '../userUtils.js';
+import { stockPlant } from '../data.js';
+import { findById, setUser, getUser } from '../userUtils.js';
 
 const user = getUser();
 const plants2 = user.plantCollection;
 
 export function userCollectionRender(user) {
     const originPlant = findById(plants2, user.id);
-    const originalPlant2 = findByName(plants, originPlant.name);
 
     const li = document.createElement('li');
     // li.title = originPlant.name;
@@ -17,8 +16,8 @@ export function userCollectionRender(user) {
     li.appendChild(h3);
 
     const img = document.createElement('img');
-    img.src = originalPlant2.img;
-    img.alt = originalPlant2.name + ' image';
+    img.src = originPlant.img;
+    img.alt = originPlant.name + ' image';
     li.appendChild(img);
 
     const removeButton = document.createElement('button');
@@ -46,22 +45,23 @@ export function userCollectionRender(user) {
 export function addUsersPlant(formEl){
     const user = getUser();
     const form = new FormData(formEl);
+    const userWater = form.get('water');
     //put random number function in for each ID generation
     const newPlant = {
         id: Math.floor(Math.random() * 10000),
-        dateAdded: dateNumber(moment().format('dddd')),
-        wateringSchedule: createWateringSchedule(),
+        wateringSchedule: createWateringSchedule(Number(userWater)),
         name: form.get('name'),
         plantSize: form.get('plant-size'),
         sunCare: form.get('sunlight'),
-        img: form.get('img-upload'),
+        img: '../assets/stock-plant-img.jpg'
+        
     };
 
     user.plantCollection.push(newPlant);
     setUser(user);
 }
 
-export function createWateringSchedule(dateNum, waterAmount) {
+export function createWateringSchedule(waterAmount) {
     let wateringSchedule = [];
     // water schedule for light watering
     if (waterAmount === 1) {
