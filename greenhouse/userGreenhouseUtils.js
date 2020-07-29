@@ -78,7 +78,7 @@ export function createWateringSchedule(waterAmount) {
     }
     return wateringSchedule;
 }
-
+ 
 export function determineWaterAmount(size, category) {
     let waterAmount = 0;
     // 3 potential water levels

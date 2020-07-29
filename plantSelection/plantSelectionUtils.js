@@ -39,9 +39,8 @@ export function renderPlants(plants) {
 
         const sizeOfPlant = document.querySelector('#sizeSelector' + plants.name);
 
-        const today = dateNumber(moment().format('dddd'));
         const waterAmount = determineWaterAmount(sizeOfPlant.value, plants.category);
-        const makeWateringSchedule = createWateringSchedule(today, waterAmount);
+        const makeWateringSchedule = createWateringSchedule(waterAmount);
         
         const newPlant = {
             id: plants.id,
