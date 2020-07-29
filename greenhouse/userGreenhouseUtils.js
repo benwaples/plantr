@@ -1,4 +1,4 @@
-import { stockPlant } from '../data.js';
+
 import { findById, setUser, getUser } from '../userUtils.js';
 
 const user = getUser();
@@ -8,7 +8,6 @@ export function userCollectionRender(user) {
     const originPlant = findById(plants2, user.id);
 
     const li = document.createElement('li');
-    // li.title = originPlant.name;
     li.style.border = 'solid white 1px';
     
     const h3 = document.createElement('h3');
