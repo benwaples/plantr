@@ -4,7 +4,7 @@ import { createWateringSchedule, determineWaterAmount } from '../greenhouse/user
 export function renderPlants(plants) {
     const li = document.createElement('li');
     li.title = plants.name;
-    li.style.border = 'solid white 1px';
+    
 
     const h3 = document.createElement('h3');
     h3.textContent = plants.name;
@@ -15,7 +15,7 @@ export function renderPlants(plants) {
     img.alt = plants.name + ' image';
     li.appendChild(img);
 
-    const sizes = ['small', 'medium', 'large'];
+    const sizes = ['Small', 'Medium', 'Large'];
 
     const sizeSelector = document.createElement('select');
     sizeSelector.id = 'sizeSelector' + plants.name;

@@ -7,13 +7,7 @@ const sunflower = {
     img: '../assets/sunflower.jpg'
 };
 
-const sunflower2 = {
-    id: 244,
-    name: 'sunflower2',
-    waterCare: 1,
-    sunCare: 'direct',
-    img: '../assets/sunflower.jpg'
-};
+
 
 export const stockPlant = {
     name: 'usersPlant',
@@ -22,8 +16,7 @@ export const stockPlant = {
 
 
 const plants = [
-    sunflower,
-    sunflower2
+    sunflower
 ];
 
 export default plants;

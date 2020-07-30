@@ -7,6 +7,34 @@ img {
     display: none;
 }
 
+li {    
+    list-style-type: none;    
+    display: flex;    
+    flex-direction: column;    
+    justify-content: center;    
+    align-items: center;    
+    padding: 10px;    
+    margin: 10px 100px 10px 100px;    
+    border: 2px var(--color6) solid;    
+    max-width: 33%;    
+    background-color: white;    
+    border-radius: 20px;
+}
+
+ul {    
+    list-style-type: none;    
+    display: flex;    
+    flex-direction: row;    
+    flex-wrap: wrap;    
+    justify-content: center;    
+    align-items: center;    
+    flex: 0 1 auto;
+}
+
+#title {
+    margin-left: -180px;
+}
+
 /* .fa .fa-son-o .fa-lg {
     font-size: 1.5em;
     color: yellow;

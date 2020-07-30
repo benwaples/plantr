@@ -8,15 +8,17 @@ body {
 header {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     align-items: center;
     border-bottom: 2px solid black;
     text-align: center;
+    justify-content: space-between;
+    
 }
 
 #link {
-    margin-right: 30px;
+    margin-right: 0;
     font-weight: bold;
+    
 }
 
 #tree {
@@ -26,19 +28,10 @@ header {
     margin-right: -7px;
 }
 
-#title {
-    display: flex;
-    flex-direction: row;
-    font-size: 45px;
-    flex-wrap: wrap;
-    justify-self: center;
-    text-align: center;
-}
 
 a:link {
     color: black;
-    text-decoration: none;
-
+    text-decoration: none;    
 }
 
 a:visited {
@@ -54,9 +47,30 @@ input, button, select {
     border-right: solid 1px black;
     padding: 0px 6px 0px 6px;
     margin-left: -4px;
-    font-weight: bold;
+    font-weight: bolder;
+    
 }
 
 .hidden {
     display: none;
 }
+
+#title {
+    display: flex;
+    flex-direction: row;
+    font-size: 45px;
+    flex-wrap: wrap;
+    justify-self: center;
+    text-align: center;
+    align-self: center;
+    top: -5px;
+    left: 1000px;
+    
+}
+
+h1 {
+    font-weight: lighter;
+}
+
+
+
