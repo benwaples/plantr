@@ -35,7 +35,7 @@ export function renderWaterToday(plant) {
     sunDiv.append(span1);
 
     const waterDiv = document.createElement('div');
-    waterDiv.classList.add('sun-div');
+    waterDiv.classList.add('water-div');
 
     const i2 = document.createElement('img');
     i2.src = '../assets/water.jpg';

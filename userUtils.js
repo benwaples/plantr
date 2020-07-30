@@ -1,18 +1,17 @@
 export function makeUser(formData) {
     return {
         name: formData.get('name'),
-        returningUser: formData.get('user'),
         plantCollection: []
     };
 }
 
 export function setUser(user) {
     const stringyUser = JSON.stringify(user);
-    return localStorage.setItem('USER', stringyUser);
+    return localStorage.setItem('PlantrUser', stringyUser);
 }
 
 export function getUser() {
-    return JSON.parse(localStorage.getItem('USER'));
+    return JSON.parse(localStorage.getItem('PlantrUser'));
 }
 
 export function findById(arrayName, idName) {
