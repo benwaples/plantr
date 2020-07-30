@@ -84,3 +84,8 @@ li {
     align-items: center;
     flex: 0 1 auto;
 }
+
+h2 {
+    display: block;
+    margin: auto;
+}

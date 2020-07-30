@@ -19,6 +19,7 @@ li {
     max-width: 33%;    
     background-color: white;    
     border-radius: 20px;
+    overflow: hidden;
 }
 
 ul {    
@@ -37,6 +38,12 @@ ul {
 
 h3 {
     text-transform: capitalize;
+}
+
+span {
+    display: block;
+    margin: auto;
+    text-align: center;
 }
 
 /* .fa .fa-son-o .fa-lg {

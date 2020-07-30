@@ -9,7 +9,6 @@ export function userCollectionRender(user) {
 
     const li = document.createElement('li');
     
-    
     const h3 = document.createElement('h3');
     h3.textContent = originPlant.name;
     li.appendChild(h3);
