@@ -14,7 +14,7 @@ li {
     justify-content: center;    
     align-items: center;    
     padding: 10px;    
-    margin: 10px 100px 10px 100px;    
+    margin: 10px 50px 10px 50px;    
     border: 2px var(--color6) solid;    
     max-width: 33%;    
     background-color: white;    
@@ -33,6 +33,10 @@ ul {
 
 #title {
     margin-left: -180px;
+}
+
+h3 {
+    text-transform: capitalize;
 }
 
 /* .fa .fa-son-o .fa-lg {
