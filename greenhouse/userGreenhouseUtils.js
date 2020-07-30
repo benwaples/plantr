@@ -11,7 +11,7 @@ export function userCollectionRender(user) {
     
     
     const h3 = document.createElement('h3');
-    h3.textContent = originPlant.name + user.size;
+    h3.textContent = originPlant.name;
     li.appendChild(h3);
 
     const img = document.createElement('img');

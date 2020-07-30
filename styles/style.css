@@ -1,5 +1,8 @@
+@import '../variables.css';
+
 body {
     font-family: 'Roboto Mono', monospace;
+    background-color: var(--color2);
 }
 
 header {
@@ -8,10 +11,7 @@ header {
     justify-content: space-between;
     align-items: center;
     border-bottom: 2px solid black;
-}
-
-#logo {
-    margin-left: 30px;
+    text-align: center;
 }
 
 #link {
@@ -30,6 +30,9 @@ header {
     display: flex;
     flex-direction: row;
     font-size: 45px;
+    flex-wrap: wrap;
+    justify-self: center;
+    text-align: center;
 }
 
 a:link {
@@ -52,4 +55,8 @@ input, button, select {
     padding: 0px 6px 0px 6px;
     margin-left: -4px;
     font-weight: bold;
+}
+
+.hidden {
+    display: none;
 }

@@ -21,11 +21,32 @@ export function renderWaterToday(plant) {
     const iconDiv = document.createElement('div');
     iconDiv.classList.add('icon-div');
     div1.append(iconDiv);
+
+    const sunDiv = document.createElement('div');
+    sunDiv.classList.add('sun-div');
     
-    const i = document.createElement('img');
-    i.src = '../assets/sun.jpg';
-    i.classList.add('icon');
-    iconDiv.append(i);
+    const i1 = document.createElement('img');
+    i1.src = '../assets/sun.jpg';
+    i1.classList.add('icon');
+    sunDiv.append(i1);
+
+    const span1 = document.createElement('span');
+    span1.textContent = originPlant.sunCare + ' sunlight';
+    sunDiv.append(span1);
+
+    const waterDiv = document.createElement('div');
+    waterDiv.classList.add('sun-div');
+
+    const i2 = document.createElement('img');
+    i2.src = '../assets/water.jpg';
+    i2.classList.add('icon');
+    waterDiv.append(i2);
+
+    const span2 = document.createElement('span');
+    span2.textContent = originPlant.wateringSchedule + ' x week';
+    waterDiv.append(span2);
+
+    iconDiv.append(sunDiv, waterDiv);
     
     const h3 = document.createElement('h3');
     h3.classList.add('h3-title');
@@ -39,8 +60,8 @@ export function renderWaterToday(plant) {
     buttonDiv.append(button);
     
     button.addEventListener('click', () => {
-        li.classList.add = 'checked';
-        button.disabled;
+        li.classList.add('checked');
+        button.disabled = true;
     });
     li.append(div1, buttonDiv);
 
