@@ -1,9 +1,9 @@
 // IMPORT MODULES under test here:
-import { determineWaterAmount } from '../greenhouse/userGreenhouseUtils.js';
+import { determineWaterAmount, createWateringSchedule, dateNumber } from '../utilsTest/testUtils.js';
 
 const test = QUnit.test;
 
-test('time to test a function', (expect) => {
+test('test function for size and water amount', (expect) => {
     //Arrange
     // Set up your arguments and expectations
     const arg1 = 'Small';
@@ -17,5 +17,38 @@ test('time to test a function', (expect) => {
 
     //Expect
     // Make assertions about what is expected versus the actual result
-    expect.deepEqual(actual, expected);
+    expect.equal(actual, expected);
+});
+
+test('test function for createWateringSchedule', (expect) => {
+    //Arrange
+    // Set up your arguments and expectations
+    const arg1 = 1;
+
+    const expected = 3;
+    
+    //Act 
+    // Call the function you're testing and set the result to a const
+    const actual = createWateringSchedule(arg1);
+
+    //Expect
+    // Make assertions about what is expected versus the actual result
+    expect.equal(actual, expected);
+});
+
+test('test function for day of the week', (expect) => {
+    //Arrange
+    // Set up your arguments and expectations
+    const arg1 = 'Wednesday';
+    
+
+    const expected = 3;
+    
+    //Act 
+    // Call the function you're testing and set the result to a const
+    const actual = dateNumber(arg1);
+
+    //Expect
+    // Make assertions about what is expected versus the actual result
+    expect.equal(actual, expected);
 });
