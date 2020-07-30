@@ -1,6 +1,6 @@
 import { renderWaterToday } from '../waterToday/waterTodayUtils.js';
 import { getUser } from '../userUtils.js';
-import { dateNumber } from '../userCollections/userCollectionsUtils.js';
+import { dateNumber } from '../greenhouse/userGreenhouseUtils.js';
 
 const waterTodayList = document.getElementById('water-today-list');
 

@@ -1,0 +1,86 @@
+@import '../variables.css';
+
+body {
+    background-color: var(--color2);
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 0 auto;
+    position: absolute;
+    top: 200px;
+    left: 10px;
+}
+
+img {
+    display: block;
+    width: 200px;
+    height: 200px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+select, button, input {
+    display: block;
+    padding: 0 auto;
+    border: 2px black solid;
+    border-radius: 20px;
+    width: 150px;
+    text-align-last: center;
+}
+
+#form-div {
+    display: block;
+    height: 800px;
+    width: 200px;
+}
+
+#form-div h3 {
+    margin: -30px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 600px;
+    margin-top: 20px; 
+    border: 2px black solid;
+    background-color: var(--color1);
+    box-sizing: border-box;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+li {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin: 10px 100px 10px 100px;
+    border: 2px var(--color6) solid;
+    max-width: 33%;
+    background-color: white;
+    border-radius: 20px;
+}
+
+#collection-list {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex: 0 1 auto;
+}

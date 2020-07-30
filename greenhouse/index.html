@@ -3,32 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/plantSelection.css">
+    <link rel="shortcut icon" type="image/ico" href="../assets/fern-2-57-282774.png">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/greenHouse.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
     <script type="text/JavaScript" src="https://MomentJS.com/downloads/moment.js"></script>
-    <title>Plantr - Collecitons</title>
+    <title>Plantr - Greenhouse</title>
 </head>
 <body>
     <header>
-        <div>Logo</div>
-        <h1>Plantr</h1>
         <div id="nav-bar">
-            <a href="">About Us</a>
-            <a href="../greenhouse/index.html">Greenhouse</a>
+            <a href="../plantSelection/index.html">Plant Selection</a>
             <a href="../waterToday/index.html">Plant Care</a>
             <a href="../calendar/index.html">Calendar</a>
-            <a href="../plantSelection/index.html">Plant Selection</a>
-            <a href="../index.html">Home</a>
         </div>
+        <a href="../index.html"><h1 id="title">Plan<img id="tree" src="../assets/plantr_logo.jpg"></img>r</h1></a>
+        <div id="link"><a href="../aboutUs/index.html">About Us</a></div>
     </header>
     <main>
-        <div>
-        <ul id="collection-list">
-    
-        </ul>
-        </div>
-        
-        <div>
+        <div id="form-div">
             <form>
+                <h3>Add Your Plant</h3>
                 <label>
                     <input type="text" placeholder="Plant Name" name="name">
                 </label>
@@ -43,12 +38,12 @@
                 <label>
                     Sunlight:
                     <select name="sunlight">
-                        <option value="low-direct">Low Light(direct)</option>
-                        <option value="low-indirect">Low Light(indirect)</option>
-                        <option value="medium-direct">Medium Light(direct)</option>
-                        <option value="medium-indirect">Medium Light(indirect)</option>
-                        <option value="direct-light">Direct Sunlight</option>
-                        <option value="indirect-light">Indirect Sunlight</option>
+                        <option value="low-direct">Low Direct</option>
+                        <option value="low-indirect">Low Indirect</option>
+                        <option value="medium-direct">Medium Direct</option>
+                        <option value="medium-indirect">Medium Indirect</option>
+                        <option value="direct-light">Direct</option>
+                        <option value="indirect-light">Indirect</option>
                     </select>
                 </label>
                 <label>
@@ -61,6 +56,11 @@
                 </label>
                 <button>Add to Greenhouse</button>
             </form>
+        </div>
+        <div>
+            <ul id="collection-list">
+        
+            </ul>
         </div>
     </main>
     <script type="module" src="userGreenhouse.js"></script>

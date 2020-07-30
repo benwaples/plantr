@@ -13,12 +13,12 @@ for (let i = 0; i < user.plantCollection.length; i++) {
 
     collectionList.append(renderUserPlant);
 }
-    
+
 form.addEventListener('submit', (e) => {
     e.preventDefault();
-
+    
     addUsersPlant(form);
 
+    window.location = '';
+    
 });
-
- 

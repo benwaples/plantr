@@ -1,10 +1,10 @@
 import { getUser, setUser } from '../userUtils.js';
-import { createWateringSchedule, dateNumber, determineWaterAmount } from '../greenhouse/userGreenhouseUtils.js';
+import { createWateringSchedule, determineWaterAmount } from '../greenhouse/userGreenhouseUtils.js';
 
 export function renderPlants(plants) {
     const li = document.createElement('li');
     li.title = plants.name;
-    li.style.border = 'solid white 1px';
+    
 
     const h3 = document.createElement('h3');
     h3.textContent = plants.name;
@@ -15,7 +15,7 @@ export function renderPlants(plants) {
     img.alt = plants.name + ' image';
     li.appendChild(img);
 
-    const sizes = ['small', 'medium', 'large'];
+    const sizes = ['Small', 'Medium', 'Large'];
 
     const sizeSelector = document.createElement('select');
     sizeSelector.id = 'sizeSelector' + plants.name;
@@ -39,17 +39,17 @@ export function renderPlants(plants) {
 
         const sizeOfPlant = document.querySelector('#sizeSelector' + plants.name);
 
-        const today = dateNumber(moment().format('dddd'));
         const waterAmount = determineWaterAmount(sizeOfPlant.value, plants.category);
-        const makeWateringSchedule = createWateringSchedule(today, waterAmount);
+        const makeWateringSchedule = createWateringSchedule(waterAmount);
         
         const newPlant = {
-            id: plants.id,
+            id: plants.id + sizeOfPlant.value,
             wateringSchedule: makeWateringSchedule,
             category: plants.category,
             name: plants.name,
             size: sizeOfPlant.value,
-            img: plants.img
+            img: plants.img,
+            sunCare: plants.sunCare
         };
 
         user.plantCollection.push(newPlant);

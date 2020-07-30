@@ -8,10 +8,10 @@ export function userCollectionRender(user) {
     const originPlant = findById(plants2, user.id);
 
     const li = document.createElement('li');
-    li.style.border = 'solid white 1px';
+    
     
     const h3 = document.createElement('h3');
-    h3.textContent = originPlant.name + user.size;
+    h3.textContent = originPlant.name;
     li.appendChild(h3);
 
     const img = document.createElement('img');
@@ -78,27 +78,27 @@ export function createWateringSchedule(waterAmount) {
     }
     return wateringSchedule;
 }
-
+ 
 export function determineWaterAmount(size, category) {
     let waterAmount = 0;
     // 3 potential water levels
-    if (size === 'small' && category === 'succulents-cactus') {
+    if (size === 'Small' && category === 'succulents-cactus') {
         waterAmount = 3;
-    } else if (size === 'medium' && category === 'succulents-cactus') {
+    } else if (size === 'Medium' && category === 'succulents-cactus') {
         waterAmount = 2;
-    } else if (size === 'large' && category === 'succulents-cactus') {
+    } else if (size === 'Large' && category === 'succulents-cactus') {
         waterAmount = 1;
-    } else if (size === 'small' && category === 'tropicals') {
+    } else if (size === 'Small' && category === 'tropicals') {
         waterAmount = 3;
-    } else if (size === 'medium' && category === 'tropicals') {
+    } else if (size === 'Medium' && category === 'tropicals') {
         waterAmount = 2;
-    } else if (size === 'large' && category === 'tropicals') {
+    } else if (size === 'Large' && category === 'tropicals') {
         waterAmount = 1;
-    } else if (size === 'small' && category === 'air-plants') {
+    } else if (size === 'Small' && category === 'air-plants') {
         waterAmount = 3;
-    } else if (size === 'medium' && category === 'air-plants') {
+    } else if (size === 'Medium' && category === 'air-plants') {
         waterAmount = 2;
-    } else if (size === 'large' && category === 'air-plants') {
+    } else if (size === 'Large' && category === 'air-plants') {
         waterAmount = 1;
     } else {
         return alert('Invalid water amount!');
