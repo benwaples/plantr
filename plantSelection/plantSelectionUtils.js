@@ -18,7 +18,8 @@ export function renderPlants(plants) {
     const sizes = ['Small', 'Medium', 'Large'];
 
     const sizeSelector = document.createElement('select');
-    sizeSelector.id = 'sizeSelector' + plants.name;
+    const idName = plants.name.replace(/ /g, '-');
+    sizeSelector.id = 'sizeSelector' + idName;
     for (let i = 0; i < sizes.length; i++) {
         const selectElement = document.createElement('option');
 
@@ -32,12 +33,12 @@ export function renderPlants(plants) {
     
     const button = document.createElement('button');
     button.textContent = 'Add to Greenhouse';
-    button.value = plants.name;
+    button.value = idName;
     button.addEventListener('click', () => {
         
         const user = getUser();
 
-        const sizeOfPlant = document.querySelector('#sizeSelector' + plants.name);
+        const sizeOfPlant = document.querySelector('#sizeSelector' + idName);
 
         const waterAmount = determineWaterAmount(sizeOfPlant.value, plants.category);
         const makeWateringSchedule = createWateringSchedule(waterAmount);
