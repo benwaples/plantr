@@ -13,6 +13,7 @@ header {
     border-bottom: 2px solid black;
     text-align: center;
     justify-content: space-between;
+    margin: 0px 10px 0px 10px
 }
 
 #link {

@@ -71,7 +71,6 @@ li {
     padding: 10px;
     margin: 10px 50px 10px 50px;
     border: 2px var(--color6) solid;
-    max-width: 33%;
     background-color: white;
     border-radius: 20px;
 }

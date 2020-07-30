@@ -1,8 +1,8 @@
 
 import { findById, setUser, getUser } from '../userUtils.js';
 
-const user = getUser();
-const plants2 = user.plantCollection;
+// const user = getUser();
+// const plants2 = user.plantCollection;
 
 export function userCollectionRender(user) {
     const originPlant = findById(plants2, user.id);
