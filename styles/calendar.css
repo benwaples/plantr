@@ -11,9 +11,9 @@ table {
 main {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    height: 500px;
+    height: 1000px;
 }
 
 th {
