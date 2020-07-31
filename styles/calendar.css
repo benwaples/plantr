@@ -47,3 +47,6 @@ p {
     cursor: pointer;
 }
 
+#title {
+    margin-left: -200px;
+}

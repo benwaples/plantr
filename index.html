@@ -7,7 +7,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
     <link rel="shortcut icon" type="image/ico" href="../assets/fern-2-57-282774.png">
-    <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/home.css">
     <title>Plantr - user</title>
@@ -22,7 +21,11 @@
     <main>
         <section>
             <h3>User Setup</h3>
-            <form id="user-input-form">
+            <div id="user-choice">
+                <h6 class="return-or-new" id="returning">Back to see your plants?</h6>
+                <h6 class="return-or-new" id="new">First time user</h6>
+            </div>
+            <form id="user-input-form" class="hidden">
                 <label>
                     <input id="name" type="text" placeholder="User Name" name="name" required>
                 </label>
