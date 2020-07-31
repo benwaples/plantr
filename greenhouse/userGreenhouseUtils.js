@@ -84,7 +84,7 @@ export function createWateringSchedule(waterAmount) {
         const water2 = 7;
         wateringSchedule.push(water1, water2);
     } else if (waterAmount === 6) {
-        const water1 = 1;
+        const water1 = 5;
         wateringSchedule.push(water1);
     } 
     return wateringSchedule;
