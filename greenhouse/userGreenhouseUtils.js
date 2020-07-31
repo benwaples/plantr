@@ -11,7 +11,9 @@ export function userCollectionRender(user) {
     
     const h3 = document.createElement('h3');
     h3.textContent = originPlant.name;
-    li.appendChild(h3);
+    const h6 = document.createElement('h6');
+    h6.textContent = originPlant.size;
+    li.append(h3, h6);
 
     const img = document.createElement('img');
     img.src = originPlant.img;
@@ -49,7 +51,7 @@ export function addUsersPlant(formEl){
         id: Math.floor(Math.random() * 10000),
         wateringSchedule: createWateringSchedule(Number(userWater)),
         name: form.get('name'),
-        plantSize: form.get('plant-size'),
+        size: form.get('plant-size'),
         sunCare: form.get('sunlight'),
         img: '../assets/stock-plant-img.jpg'
         
