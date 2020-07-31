@@ -35,24 +35,3 @@ export function findByName(arrayName, idName) {
     }
     return null;
 }
-
-export function timeFromNow(time) {
-    
-    // getting time now
-    const unixTime = new Date(time).getTime();
-    if (!unixTime) return;
-    const now = new Date().getTime(); 
-
-    //calculate difference
-    const difference = (unixTime / 1000) - (now / 1000);
-
-    // returning object 
-    const tfn = {};
-
-    //now or past or future
-    tfn.when = 'now';
-    if (difference > 0) {
-        tfn.when = 'future';
-    }
-
-}

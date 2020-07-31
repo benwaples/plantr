@@ -11,7 +11,9 @@ export function userCollectionRender(user) {
     
     const h3 = document.createElement('h3');
     h3.textContent = originPlant.name;
-    li.appendChild(h3);
+    const h6 = document.createElement('h6');
+    h6.textContent = originPlant.size;
+    li.append(h3, h6);
 
     const img = document.createElement('img');
     img.src = originPlant.img;
@@ -44,12 +46,11 @@ export function addUsersPlant(formEl){
     const user = getUser();
     const form = new FormData(formEl);
     const userWater = form.get('water');
-    //put random number function in for each ID generation
     const newPlant = {
         id: Math.floor(Math.random() * 10000),
         wateringSchedule: createWateringSchedule(Number(userWater)),
         name: form.get('name'),
-        plantSize: form.get('plant-size'),
+        size: form.get('plant-size'),
         sunCare: form.get('sunlight'),
         img: '../assets/stock-plant-img.jpg'
         
@@ -61,7 +62,6 @@ export function addUsersPlant(formEl){
 
 export function createWateringSchedule(waterAmount) {
     let wateringSchedule = [];
-    // water schedule for light watering
     if (waterAmount === 1) {
         const water1 = 3;
         wateringSchedule.push(water1);
@@ -92,7 +92,6 @@ export function createWateringSchedule(waterAmount) {
  
 export function determineWaterAmount(size, category) {
     let waterAmount = 0;
-    // 3 potential water levels
     if (size === 'Small' && category === 'succulents-cactus') {
         waterAmount = 3;
     } else if (size === 'Medium' && category === 'succulents-cactus') {

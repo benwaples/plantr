@@ -93,3 +93,16 @@ h2 {
     text-shadow: 2px 1px 3px var(--color6);
 
 }
+
+h6 {
+    margin-bottom: 5px;
+    margin-top: -10px;
+}
+
+#title {
+    margin-left: -250px;
+}
+
+#form-button {
+    background: white;
+}
