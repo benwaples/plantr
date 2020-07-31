@@ -35,7 +35,7 @@ export function renderWaterToday(plant) {
     sunDiv.append(span1);
 
     const waterDiv = document.createElement('div');
-    waterDiv.classList.add('sun-div');
+    waterDiv.classList.add('water-div');
 
     const i2 = document.createElement('img');
     i2.src = '../assets/water.jpg';
@@ -43,7 +43,7 @@ export function renderWaterToday(plant) {
     waterDiv.append(i2);
 
     const span2 = document.createElement('span');
-    span2.textContent = originPlant.wateringSchedule + ' x week';
+    span2.textContent = originPlant.wateringSchedule.length + ' x week';
     waterDiv.append(span2);
 
     iconDiv.append(sunDiv, waterDiv);

@@ -1,1 +1,2 @@
-import './example.test.js';
+// import './renderPlants.test.js';
+import './determineWaterAmount.test.js';

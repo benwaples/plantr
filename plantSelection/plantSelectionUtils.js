@@ -1,6 +1,10 @@
 import { getUser, setUser } from '../userUtils.js';
 import { createWateringSchedule, determineWaterAmount } from '../greenhouse/userGreenhouseUtils.js';
 
+const addSpan = document.getElementById('greenhouse-add');
+
+const numberOfPlants = document.querySelector('#plant-number');
+
 export function renderPlants(plants) {
     const li = document.createElement('li');
     li.title = plants.name;
@@ -36,7 +40,11 @@ export function renderPlants(plants) {
     button.value = idName;
     button.addEventListener('click', () => {
         
+        addSpan.textContent = `${plants.name} has been added to your greenhouse.`;
+
         const user = getUser();
+
+        numberOfPlants.textContent = `You have ${user.plantCollection.length + 1} plants in your greenhouse.`;
 
         const sizeOfPlant = document.querySelector('#sizeSelector' + idName);
 
@@ -56,8 +64,6 @@ export function renderPlants(plants) {
         user.plantCollection.push(newPlant);
 
         setUser(user);
-
-        alert(plants.name + ' has been added to your collection!');
 
     });
 

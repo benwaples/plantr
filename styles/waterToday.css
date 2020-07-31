@@ -57,6 +57,15 @@
     margin-left: 10px;
 }
 
+.water-div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    align-self: flex-start;
+    width: 200px;
+}
+
 .main-div:hover{
     cursor: pointer;
 }
@@ -108,4 +117,8 @@ img {
 
 body {
     cursor: url('../assets/watering-can.jpg'), auto;
+}
+
+#water-today {
+    text-align: center;
 }

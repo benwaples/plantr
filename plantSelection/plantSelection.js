@@ -1,6 +1,7 @@
 import plants from '../data.js';
 import { renderPlants } from '../plantSelection/plantSelectionUtils.js';
 
+
 const plantList = document.getElementById('plant-list');
 
 for (let i = 0; i < plants.length; i++) {
@@ -9,3 +10,5 @@ for (let i = 0; i < plants.length; i++) {
 
     plantList.append(plantRender);
 }
+
+

@@ -3,6 +3,7 @@
 body {
     font-family: 'Roboto Mono', monospace;
     background-color: var(--color2);
+    margin: 0;
 }
 
 header {
@@ -12,7 +13,7 @@ header {
     border-bottom: 2px solid black;
     text-align: center;
     justify-content: space-between;
-    
+    margin: 0px 10px 0px 10px
 }
 
 #link {
@@ -72,5 +73,9 @@ h1 {
     font-weight: lighter;
 }
 
-
-
+footer {
+    display: flex;
+    justify-content: flex-end;
+    height: 100px;
+    background-color: var(--color5)
+}

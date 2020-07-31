@@ -3,9 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/calendar.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image/ico" href="../assets/fern-2-57-282774.png">
     <title>Plantr - Calendar</title>
 </head>
 <body>
+    <header>
+        <div id="nav-bar">
+            <a href="../plantSelection/index.html">Plant Selection</a>
+            <a href="../greenhouse/index.html">Greenhouse</a>
+            <a href="../waterToday/index.html">Plant Care</a>
+        </div>
+        <a href="../index.html"><h1 id="title">Plan<img id="tree" src="../assets/plantr_logo.jpg"></img>r</h1></a>
+        <div id="link"><a href="../aboutUs/index.html">About Us</a></div>
+    </header>
+    <main>
+        <h1>Weekly Watering Schedule</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Monday</th>
+                    <th>Tuesday</th>
+                    <th>Wednesday</th>
+                    <th>Thursday</th>
+                    <th>Friday</th>
+                    <th>Saturday</th>
+                    <th>Sunday</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td id="monday"></td>
+                    <td id="tuesday"></td>
+                    <td id="wednesday"></td>
+                    <td id="thursday"></td>
+                    <td id="friday"></td>
+                    <td id="saturday"></td>
+                    <td id="sunday"></td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+    <footer></footer>
     <script type="module" src="calendar.js"></script>
 </body>
 </html>
