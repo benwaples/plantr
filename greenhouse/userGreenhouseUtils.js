@@ -25,13 +25,12 @@ export function userCollectionRender(user) {
     removeButton.value = originPlant.id;
     removeButton.addEventListener('click', () => {
         const user = getUser();
-
         const usersPlantCollection = user.plantCollection;
-
+        
         for (let i = 0; i < usersPlantCollection.length; i++) {
             
             const plantFromCollection = usersPlantCollection[i];
-            if (Number(removeButton.value) === plantFromCollection.id) {
+            if (removeButton.value === plantFromCollection.id) {
                 usersPlantCollection.splice(i, 1);
             }
         }
