@@ -4,7 +4,7 @@ main {
     display: flex;
     height: 1500px;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     background-image: url('../assets/vickholius-nugroho-jt6QxZwSOCQ-unsplash.jpg');
     background-size: cover;
@@ -12,14 +12,18 @@ main {
     background-position: auto;
 }
 
+#description {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    background-color: white;
+    opacity: .8;
+    border-radius: 5px;
+    padding: 7px
+}
+
 section {
     background-color: white;
     opacity: .8;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
     border-radius: 5px;
     color: black;
     font-size: 24px;
