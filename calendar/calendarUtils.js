@@ -4,6 +4,7 @@ export function renderTableRow(plant) {
 
     p.addEventListener('click', () => {
         p.style.textDecoration = 'line-through';
+        
     });
     return p;
 }

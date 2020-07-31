@@ -74,7 +74,19 @@ export function createWateringSchedule(waterAmount) {
         const water2 = 4;
         const water3 = 6;
         wateringSchedule.push(water1, water2, water3);
-    }
+    } else if (waterAmount === 4) {
+        const water1 = 1;
+        const water2 = 3;
+        const water3 = 5;
+        wateringSchedule.push(water1, water2, water3);
+    } else if (waterAmount === 5) {
+        const water1 = 3;
+        const water2 = 7;
+        wateringSchedule.push(water1, water2);
+    } else if (waterAmount === 6) {
+        const water1 = 1;
+        wateringSchedule.push(water1);
+    } 
     return wateringSchedule;
 }
  
@@ -88,15 +100,15 @@ export function determineWaterAmount(size, category) {
     } else if (size === 'Large' && category === 'succulents-cactus') {
         waterAmount = 1;
     } else if (size === 'Small' && category === 'tropicals') {
-        waterAmount = 3;
+        waterAmount = 4;
     } else if (size === 'Medium' && category === 'tropicals') {
         waterAmount = 2;
     } else if (size === 'Large' && category === 'tropicals') {
-        waterAmount = 1;
+        waterAmount = 6;
     } else if (size === 'Small' && category === 'air-plants') {
         waterAmount = 3;
     } else if (size === 'Medium' && category === 'air-plants') {
-        waterAmount = 2;
+        waterAmount = 5;
     } else if (size === 'Large' && category === 'air-plants') {
         waterAmount = 1;
     } else {

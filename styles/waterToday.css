@@ -118,3 +118,7 @@ img {
 body {
     cursor: url('../assets/watering-can.jpg'), auto;
 }
+
+#water-today {
+    text-align: center;
+}

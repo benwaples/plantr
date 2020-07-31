@@ -1,3 +1,5 @@
+@import '../variables.css';
+
 table {
     border: solid 1px black;
     background-color: white;
@@ -11,6 +13,7 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 500px;
 }
 
 th {
@@ -18,10 +21,17 @@ th {
     padding: auto;
     border-right: solid 1px black;
     border-bottom: solid 1px black;
+    background-color: var(--color1);
+    
+}
+
+th:nth-child(1) {
+    border-top-left-radius: 20px;
 }
 
 th:nth-child(7) {
     border-right: none;
+    border-top-right-radius: 20px;
 }
 
 td {

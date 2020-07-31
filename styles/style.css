@@ -77,8 +77,5 @@ footer {
     display: flex;
     justify-content: flex-end;
     height: 100px;
-    /* left: 0;
-    bottom: 0;  */
-    /* width: 100%; */
     background-color: var(--color5)
 }

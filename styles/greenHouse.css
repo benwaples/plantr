@@ -88,4 +88,8 @@ li {
 h2 {
     display: block;
     margin: auto;
+    text-align: center;
+    font-size: 3em;
+    text-shadow: 2px 1px 3px var(--color6);
+
 }
