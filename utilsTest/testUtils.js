@@ -1,3 +1,5 @@
+// hmmm, looks like all the functions in this file are either duplicate or unused code?
+
 export function createWateringSchedule(waterAmount) {
     let wateringSchedule = [];
     // water schedule for light watering
