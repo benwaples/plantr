@@ -9,7 +9,6 @@ export function renderPlants(plants) {
     const li = document.createElement('li');
     li.title = plants.name;
     
-
     const h3 = document.createElement('h3');
     h3.textContent = plants.name;
     li.appendChild(h3);

@@ -14,7 +14,6 @@ for (let i = 0; i < user.plantCollection.length; i++) {
     const plant = user.plantCollection[i];
     const renderUserPlant = userCollectionRender(plant);
     
-
     collectionList.append(renderUserPlant);
 }
 

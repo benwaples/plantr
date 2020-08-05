@@ -30,6 +30,7 @@ export function userCollectionRender(user) {
         for (let i = 0; i < usersPlantCollection.length; i++) {
             
             const plantFromCollection = usersPlantCollection[i];
+            // cool logic!
             if (removeButton.value === plantFromCollection.id) {
                 usersPlantCollection.splice(i, 1);
             }
@@ -46,6 +47,7 @@ export function addUsersPlant(formEl){
     const form = new FormData(formEl);
     const userWater = form.get('water');
     const newPlant = {
+        // nice id makin'!
         id: Math.floor(Math.random() * 10000),
         wateringSchedule: createWateringSchedule(Number(userWater)),
         name: form.get('name'),
@@ -59,35 +61,21 @@ export function addUsersPlant(formEl){
     setUser(user);
 }
 
+const scheduleData = 
+[
+    [3],
+    [2, 6],
+    [2, 4, 6],
+    [1, 3, 5],
+    [3, 7], 
+    [5]
+];
+
+// I'm just eyeballing it, but I think this would do the same thing . . .
 export function createWateringSchedule(waterAmount) {
-    let wateringSchedule = [];
-    if (waterAmount === 1) {
-        const water1 = 3;
-        wateringSchedule.push(water1);
-    } else if (waterAmount === 2) {
-        const water1 = 2;
-        const water2 = 6;
-        wateringSchedule.push(water1, water2);
-    } else if (waterAmount === 3) {
-        const water1 = 2;
-        const water2 = 4;
-        const water3 = 6;
-        wateringSchedule.push(water1, water2, water3);
-    } else if (waterAmount === 4) {
-        const water1 = 1;
-        const water2 = 3;
-        const water3 = 5;
-        wateringSchedule.push(water1, water2, water3);
-    } else if (waterAmount === 5) {
-        const water1 = 3;
-        const water2 = 7;
-        wateringSchedule.push(water1, water2);
-    } else if (waterAmount === 6) {
-        const water1 = 5;
-        wateringSchedule.push(water1);
-    } 
-    return wateringSchedule;
+    return scheduleData[waterAmount - 1];
 }
+
  
 export function determineWaterAmount(size, category) {
     let waterAmount = 0;
@@ -115,29 +103,16 @@ export function determineWaterAmount(size, category) {
     return waterAmount;
 }
 
-export function dateNumber(dateAdded) {
-    let dateNum = 0;
-    if (dateAdded === 'Monday') {
-        dateNum = 1;
-    }
-    if (dateAdded === 'Tuesday') {
-        dateNum = 2;
-    }
-    if (dateAdded === 'Wednesday') {
-        dateNum = 3;
-    }
-    if (dateAdded === 'Thursday') {
-        dateNum = 4;
-    }
-    if (dateAdded === 'Friday') {
-        dateNum = 5;
-    }
-    if (dateAdded === 'Saturday') {
-        dateNum = 6;
-    }
-    if (dateAdded === 'Sunday') {
-        dateNum = 7;
-    }
+const dayMap = {
+    Monday: 1,
+    Tuesday: 2,
+    Wednesday: 3,
+    Thursday: 4,
+    Friday: 5,
+    Saturday: 6,
+    Sunday: 7,
+};
 
-    return dateNum;
+export function dateNumber(dateAdded) {
+    return dayMap[dateAdded] || 0;
 }

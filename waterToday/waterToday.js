@@ -13,6 +13,7 @@ for (let i = 0; i < userCollection.length; i++) {
     const plant = userCollection[i];
 
     for (let j = 0; j < plant.wateringSchedule.length; j++) {
+        // nice nested for loop!
         const subPlant = plant.wateringSchedule[j];
 
         if (subPlant === today) {
